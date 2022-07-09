@@ -1,0 +1,23 @@
+.reference {
+  position: absolute;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  width: 100%;
+  height: 3988px;
+  z-index: 10;
+
+  div {
+    margin: 0 auto;
+    width: 1366px;
+    height: 100%;
+
+    opacity: 30%;
+
+    background-image: url('./reference/screenshot.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
