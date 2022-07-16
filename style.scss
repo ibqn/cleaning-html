@@ -282,3 +282,115 @@ img {
     }
   }
 }
+
+.section {
+  &-padding {
+    padding: 60px 0;
+  }
+
+  &-title {
+    text-align: center;
+    margin-bottom: 45px;
+
+    .title {
+      display: inline-block;
+      font-size: var(--fs-lg);
+      font-weight: 400;
+      text-transform: capitalize;
+      color: var(--main-color);
+      margin: 0 0 12px;
+      padding: 0 40px;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 34px;
+        background-color: var(--main-color);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+
+    .sub-title {
+      font-size: var(--fs-3xl);
+      text-transform: capitalize;
+    }
+  }
+}
+
+.about {
+  &-image,
+  &-text {
+    grid-column: span 6;
+  }
+
+  .section-title {
+    text-align: left;
+    margin: 0 0 15px;
+  }
+
+  &-text {
+    align-self: center;
+  }
+
+  &-image {
+    .image-box {
+      max-width: 400px;
+      margin: auto;
+      padding: 15px;
+      border-radius: 50%;
+      background-color: var(--bg-color);
+      box-shadow: var(--shadow);
+      position: relative;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .box {
+        height: 125px;
+        width: 125px;
+        background-color: var(--main-color);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-radius: 0 40px;
+        padding: 15px;
+
+        span {
+          color: var(--text-white);
+          font-weight: bold;
+          font-size: var(--fs-3xl);
+          margin: 0 0 5px;
+          line-height: 1;
+        }
+
+        p {
+          font-size: var(--fs-sm);
+          text-transform: uppercase;
+          color: var(--text-light-gray);
+          margin: 0;
+        }
+      }
+
+      .box-1 {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
