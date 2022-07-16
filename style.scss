@@ -58,6 +58,23 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  color: var(--text-white);
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--body-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
 *,
 ::before,
 ::after {
@@ -86,7 +103,7 @@ ul {
 }
 
 .container {
-  border: solid 1px red;
+  // border: solid 1px red;
   max-width: 1170px;
   margin: auto;
   padding: 0 15px;
@@ -103,6 +120,24 @@ ul {
   width: 100%;
   z-index: 2;
   padding: 10px 0;
+
+  &.bg-reveal::before {
+    transform: translateY(0);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    transform: translateY(calc(-100% - 10px));
+    transition: transform 0.5s ease;
+  }
 
   .container {
     display: flex;
