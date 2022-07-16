@@ -110,10 +110,48 @@ ul {
     justify-content: space-between;
   }
 
+  .logo {
+    a {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1;
+      display: block;
+      transform: scaleY(0.9);
+      letter-spacing: 2px;
+    }
+
+    span {
+      font-size: 12px;
+      display: block;
+      font-weight: 400;
+      color: var(--text-dark-gray);
+      letter-spacing: 1px;
+    }
+  }
+
   .nav {
     li {
       display: inline-block;
       margin-left: 35px;
     }
+
+    a {
+      text-transform: capitalize;
+      font-size: var(--fs-md);
+      color: var(--text-x-dark-gray);
+      font-weight: 400;
+      display: block;
+      padding: 10px 0;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+
+  .nav-toggler {
+    display: none;
   }
 }
