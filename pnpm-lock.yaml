@@ -1,12 +1,26 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/poppins': ^4.5.8
+  '@fortawesome/fontawesome-free': ^6.1.1
   sass: ^1.53.0
 
 dependencies:
+  '@fontsource/poppins': 4.5.8
+  '@fortawesome/fontawesome-free': 6.1.1
   sass: 1.53.0
 
 packages:
+
+  /@fontsource/poppins/4.5.8:
+    resolution: {integrity: sha512-HE9yLDxYJEcxooVrYvvEhtyxaYU32hQIx1+npKegVefceE0l0zi0ePqKWWxYxkFpyy6WuZSQ+9rai3INnYKEJA==}
+    dev: false
+
+  /@fortawesome/fontawesome-free/6.1.1:
+    resolution: {integrity: sha512-J/3yg2AIXc9wznaVqpHVX3Wa5jwKovVF0AMYSnbmcXTiL3PpRPfF58pzWucCwEiCJBp+hCNRLWClTomD8SseKg==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
 
   /anymatch/3.1.2:
     resolution: {integrity: sha512-P43ePfOAIupkguHUycrc4qJ9kz8ZiuOUijaETwX7THt0Y/GNK7v0aa8rY816xWjZ7rJdA5XdMcpVFTKMq+RvWg==}
