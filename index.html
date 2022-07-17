@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
     <script src="main.js" defer></script>
     <title>Document</title>
   </head>
@@ -142,5 +146,36 @@
         </div>
       </div>
     </section>
+
+    <div class="style-switcher js-style-switcher">
+      <button
+        type="button"
+        class="style-switcher-toggler js-style-switcher-toggler"
+      >
+        <i class="fas fa-cog"></i>
+      </button>
+      <div class="style-switcher-main">
+        <h2>style switcher</h2>
+        <div class="style-switcher-item">
+          <p>theme color</p>
+          <div class="theme-color">
+            <input
+              type="range"
+              min="0"
+              max="360"
+              class="hue-slider js-hue-slider"
+            />
+            <div class="hue">Hue: <span class="js-hue"></span></div>
+          </div>
+        </div>
+        <div class="style-switcher-item">
+          <label class="form-switch">
+            <span>dark mode</span>
+            <input type="checkbox" class="js-dark-mode" />
+            <div class="box"></div>
+          </label>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
