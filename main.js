@@ -53,3 +53,31 @@ const themeColor = () => {
 }
 
 themeColor()
+
+const themeLightDark = () => {
+  const darkModeCheckBox = document.querySelector('.js-dark-mode')
+
+  const themeMode = () => {
+    const darkMode = localStorage.getItem('theme-dark') === 'true'
+
+    if (darkMode) {
+      document.body.classList.add('theme-dark')
+    } else {
+      document.body.classList.remove('theme-dark')
+    }
+  }
+
+  darkModeCheckBox.addEventListener('click', ({ target }) => {
+    const { checked } = target
+    localStorage.setItem('theme-dark', checked)
+    themeMode()
+  })
+
+  if (localStorage.getItem('theme-dark') !== null) {
+    themeMode()
+  }
+
+  darkModeCheckBox.checked = document.body.classList.contains('theme-dark')
+}
+
+themeLightDark()
