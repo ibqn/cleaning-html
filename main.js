@@ -16,11 +16,12 @@ const styleSwitcherToggle = () => {
   const styleSwitcherToggler = document.querySelector(
     '.js-style-switcher-toggler'
   )
+  const styleSwitcherIcon = styleSwitcherToggler.querySelector('i')
 
   styleSwitcherToggler.addEventListener('click', () => {
     styleSwitcher.classList.toggle('open')
-    styleSwitcherToggler.querySelector('i').classList.toggle('fa-times')
-    styleSwitcherToggler.querySelector('i').classList.toggle('fa-cog')
+    styleSwitcherIcon.classList.toggle('fa-times')
+    styleSwitcherIcon.classList.toggle('fa-cog')
   })
 }
 
