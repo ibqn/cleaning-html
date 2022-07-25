@@ -81,3 +81,22 @@ const themeLightDark = () => {
 }
 
 themeLightDark()
+
+const navigation = () => {
+  const navigationToggler = document.querySelector('.js-nav-toggler')
+  const nav = document.querySelector('.js-nav')
+  const navItems = nav.querySelectorAll('li')
+
+  navigationToggler.addEventListener('click', () => {
+    nav.classList.toggle('open')
+    navigationToggler.classList.toggle('active')
+  })
+
+  navItems.forEach((element) => {
+    element.addEventListener('click', () => {
+      nav.classList.remove('open')
+    })
+  })
+}
+
+navigation()
