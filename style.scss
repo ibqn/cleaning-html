@@ -867,11 +867,6 @@ button {
   }
 
   .pricing {
-    .grid {
-      margin: 0 30px;
-      gap: 60px;
-    }
-
     &-item {
       grid-column: span 6;
       padding: 30px 60px;
@@ -1050,5 +1045,29 @@ button {
   }
 }
 
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
+  .grid {
+    gap: 30px 15px;
+  }
+
+  .home {
+    &-image {
+      img {
+        max-width: 200px;
+      }
+
+      .circle-wrapper {
+        .circle {
+          height: 250px;
+          width: 250px;
+        }
+      }
+    }
+  }
+
+  .pricing {
+    &-item {
+      grid-column: span 12;
+    }
+  }
 }
